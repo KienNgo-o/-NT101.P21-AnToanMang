@@ -32,17 +32,6 @@ string encryption(string ans, string text, char map[5][5])
 		if (text[text.size() - 1] == 'X') text += 'Y';
 		else text += 'X';
 	}
-
-	int check[500]; int u = 1;
-	for (int i = 0; i < 5; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			check[map[i][j]] = u++;
-		}
-	}
-
-
 	for (int i = 0; i < text.size(); i += 2)
 	{
 		int x1, x2, y1, y2 = 0;
@@ -88,15 +77,6 @@ string encryption(string ans, string text, char map[5][5])
 }
 string decryption(string ans, string text, char map[5][5])
 {
-	int check[500]; int u = 1;
-	for (int i = 0; i < 5; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			check[map[i][j]] = u++;
-		}
-	}
-
 	for (int i = 0; i < text.size(); i += 2)
 	{
 		int x1, x2, y1, y2 = 0;
